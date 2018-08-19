@@ -1,0 +1,32 @@
+{
+  "name": "itemmanagerserver",
+  "version": "1.0.0",
+  "description": "Item Manager Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require babel-core/register ./src/**/*.spec.js",
+    "dev": "cross-env PORT=1338 DB_FILE=db.json babel-node src",
+    "build": "babel src -d build --ignore **/*.spec.js",
+    "prod": "cross-env PORT=1338 DB_FILE=db.json node build"
+  },
+  "author": "Daniel Hoang",
+  "license": "ISC",
+  "repository": "github:L31N4D8/ItemManagerClient",
+  "dependencies": {
+    "@koa/cors": "^2.2.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
+    "cross-env": "^5.2.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.10",
+    "lowdb": "^1.0.0",
+    "mocha": "^5.2.0",
+    "request": "^2.88.0",
+    "uuid": "^3.3.2"
+  }
+}
