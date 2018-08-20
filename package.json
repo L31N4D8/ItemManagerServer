@@ -4,7 +4,7 @@
   "description": "Item Manager Server",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require babel-core/register ./src/**/*.spec.js",
+    "test": "mocha --require ./mochaSetup ./src/**/*.spec.js --exit",
     "dev": "cross-env PORT=1338 DB_FILE=db.json babel-node src",
     "build": "babel src -d build --ignore **/*.spec.js",
     "prod": "cross-env PORT=1338 DB_FILE=db.json node build"
@@ -27,6 +27,7 @@
     "lowdb": "^1.0.0",
     "mocha": "^5.2.0",
     "request": "^2.88.0",
+    "sinon": "^6.1.5",
     "uuid": "^3.3.2"
   }
 }

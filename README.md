@@ -5,7 +5,7 @@ npm install
 
 ### TEST
 ```
-npm run test
+npm test
 ```
 
 ### BUILD PRODUCTION
